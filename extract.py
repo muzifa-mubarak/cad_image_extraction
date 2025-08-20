@@ -16,7 +16,7 @@ app=FastAPI()
 async def extract(file: UploadFile=File(...)):
     chat = ChatGoogleGenerativeAI(
         model="gemini-2.0-flash",  
-        google_api_key=api,  
+        google_api_key="your-api",  
         temperature=0.7
     )
 
