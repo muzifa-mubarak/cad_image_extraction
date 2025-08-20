@@ -18,8 +18,20 @@ It performs OCR-like extraction and returns structured information such as **par
    ```bash
    git clone https://github.com/yourusername/cad_image_extraction.git
    cd cad_image_extraction
-2.Install dependencies:
-  ```bash
-  pip install -r requirements.txt
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+3. Run the FastAPI server:
+   ```bash
+   uvicorn extract:app --reload
+4. Open in browser or Postman:
+   ```bash
+   http://127.0.0.1:8000/docs
+
+   
+   
+
+
 
  
+
