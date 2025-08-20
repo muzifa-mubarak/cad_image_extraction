@@ -18,3 +18,8 @@ It performs OCR-like extraction and returns structured information such as **par
    ```bash
    git clone https://github.com/yourusername/cad_image_extraction.git
    cd cad_image_extraction
+2.Install dependencies:
+  ```bash
+  pip install -r requirements.txt
+
+ 
