@@ -1,96 +1,20 @@
-﻿# cad_image_extraction
-CAD Image Extraction API
+# CAD Image Extraction API
+This project provides a **FastAPI-based service** for extracting manufacturing and mechanical part data from **CAD images / engineering drawings** using **AI (Gemini 2.5 Flash)**.  
+It performs OCR-like extraction and returns structured information such as **parts list, dimensions, materials, and annotations**.
 
-This project provides a FastAPI-based service for extracting manufacturing and mechanical part data from CAD images / engineering drawings using AI (Gemini 2.5 Flash).
-It performs OCR-like extraction and returns structured information such as parts list, dimensions, materials, and annotations.
+---
 
-🚀 Features
+## 🚀 Features
+- Upload a **CAD image** via API  
+- Uses **Google Gemini 2.5 Flash** model for AI-powered extraction  
+- Returns structured data in **JSON format** (Bill of Materials style)  
+- Built with **FastAPI** for easy deployment and testing  
 
-Upload a CAD image via API.
+---
 
-Uses Google Gemini 2.5 Flash model for AI-powered extraction.
+## ⚡ Installation & Setup
 
-Returns structured data in JSON format (Bill of Materials style).
-
-Built with FastAPI for easy deployment and testing.
-
-⚡ Installation & Setup
-
-Clone this repository:
-
-git clone https://github.com/yourusername/cad_image_extraction.git
-cd cad_image_extraction
-
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-Run the FastAPI server:
-
-uvicorn extract:app --reload
-
-
-Open in browser or Postman:
-
-http://127.0.0.1:8000/docs
-
-📌 Usage
-Endpoint: POST /extract
-
-Description: Upload a CAD/engineering drawing image to extract part details.
-
-Parameters:
-
-file: Image file (PNG/JPG).
-
-Example (Postman):
-
-Select POST method → http://127.0.0.1:8000/extract
-
-In Body → form-data:
-
-Key = file → Type = File → Choose your CAD image
-
-Send request ✅
-
-Example Response:
-{
-  "extracted_data": [
-    {
-      "Item No.": "1",
-      "Part Name": "Liquid Outlet",
-      "Material": "Mild Steel",
-      "Quantity": "2",
-      "Weight": "5kg",
-      "Dimensions": "100 x 50 x 30 mm",
-      "Remarks": "Threaded connection"
-    },
-    {
-      "Item No.": "2",
-      "Part Name": "Air Inlet",
-      "Material": "N/A",
-      "Quantity": "1",
-      "Weight": "N/A",
-      "Dimensions": "NPT ¼”",
-      "Remarks": "N/A"
-    }
-  ]
-}
-
-🛠 Tech Stack
-
-FastAPI – Web framework
-
-Google Gemini 2.5 Flash – AI model for extraction
-
-Python – Backend
-
-Uvicorn – ASGI server
-
-📖 Notes
-
-Make sure to set your Google API key securely (e.g., in .env).
-
-This project is designed for engineering drawings; results depend on image quality.
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/cad_image_extraction.git
+   cd cad_image_extraction
